@@ -1,0 +1,113 @@
+// If you want to override variables do it here
+@import 'variables';
+
+$enable-ltr: true;
+$enable-rtl: true;
+
+// Import CoreUI for React components library
+@import '@coreui/coreui/scss/coreui';
+
+// Import Chart.js custom tooltips styles
+@import '@coreui/chartjs/scss/coreui-chartjs';
+
+@import 'layout';
+@import 'example';
+
+// If you want to add custom CSS you can put it here.
+@import 'custom';
+
+.modal-side .modal-dialog {
+  min-width: 100% !important;
+}
+
+@media (min-width: 576px) {
+  .modal-side .modal-dialog {
+    min-width: 55% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modal-side .modal-dialog {
+    min-width: 40% !important;
+  }
+}
+
+.modal-side .modal-dialog .modal-content {
+  height: 100% !important;
+  border-radius: 0% !important;
+}
+.modal-side .modal-dialog .modal-content .modal-footer {
+  justify-content: space-between !important;
+}
+.modal-side .modal-dialog-scrollable {
+  max-height: 100% !important;
+}
+
+// * MODAL AS LEFT/RIGHT SIDEBAR
+.modal.left .modal-dialog,
+.modal.right .modal-dialog {
+  position: fixed;
+  margin: auto;
+  width: 40%;
+  height: 100%;
+  -webkit-transform: translate3d(0%, 0, 0);
+  -ms-transform: translate3d(0%, 0, 0);
+  -o-transform: translate3d(0%, 0, 0);
+  transform: translate(0%, 0, 0);
+}
+
+.modal.left .modal-content,
+.modal.right .modal-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.modal.left .modal-body,
+.modal.right .modal-body {
+  padding: 15px 15px 25px;
+}
+
+/*Left*/
+.modal.left.fade .modal-dialog {
+  left: -40%;
+  -webkit-transition: opacity 0.35s linear, left 0.35s ease-out;
+  -moz-transition: opacity 0.35s linear, left 0.35s ease-out;
+  -o-transition: opacity 0.35s linear, left 0.35s ease-out;
+  transition: opacity 0.35s linear, left 0.35s ease-out;
+}
+
+.modal.left.fade.show .modal-dialog {
+  left: 0;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+  right: -40%;
+  -webkit-transition: opacity 0.35s linear, right 0.35s ease-out;
+  -moz-transition: opacity 0.35s linear, right 0.35s ease-out;
+  -o-transition: opacity 0.35s linear, right 0.35s ease-out;
+  transition: opacity 0.35s linear, right 0.35s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+  right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  border-bottom-color: #eeeeee;
+  background-color: #fafafa;
+}
+
+/* Loading Modal  */
+.loading-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,16 @@
+export const authConstant = {
+  // Request
+  LOGIN_REQUEST: 'LOGIN_REQUEST',
+  REGISTER_REQUEST: 'REGISTER_REQUEST',
+
+  // Request Success
+  LOGIN_SUCCESS: 'LOGIN_SUCCESS',
+  REGISTER_SUCCESS: 'REGISTER_SUCCESS',
+
+  // Request Error
+  LOGIN_ERROR: 'LOGIN_ERROR',
+  REGISTER_ERROR: 'REGISTER_ERROR',
+
+  // Action
+  LOGOUT: 'LOGOUT',
+}
